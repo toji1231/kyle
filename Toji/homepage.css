@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    background: url(them.avif) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    height: 80px;
+    width: 100%;
+    background: rgba(71, 69, 71, 0.233);
+}
+
+.logo{
+    width: 90px;
+    height: auto;
+    padding: 20px 100px;
+}
+
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: 'Roboto', sans-serif;
+    transition: .4s;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover{
+    background: gray;
+    border-radius: 2px;
+}
+
+.wrapper .center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.center h1{
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+}
+
+.center h2{
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.center .buttons{
+    margin: 35px 350px;
+}
+
+.buttons button{
+    height: 50px;
+    width: 140px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffb3b3;
+    background: red ;
+    border: 1px solid #cc0000;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.buttons button:hover{
+    background: #cc0000;
+}

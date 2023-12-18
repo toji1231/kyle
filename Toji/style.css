@@ -1,0 +1,80 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#user-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#task-form {
+  display: flex;
+}
+
+#task-input,
+#task-due-date {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.delete {
+  color: #ff3333;
+  cursor: pointer;
+}
+
+.personal {
+  background-color: #ffd699;
+}
+
+.work {
+  background-color: #b3e0ff;
+}
+
+.study {
+  background-color: #c2f0c2;
+}

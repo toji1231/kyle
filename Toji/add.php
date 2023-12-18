@@ -1,0 +1,54 @@
+<?php
+require 'config.php';
+if(isset($_POST["submit"])){
+    $name = $_POST["name"];
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirmpassword = $_POST["confirmpassword"];
+    $duplicate = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$username' OR email = '$email'");
+    if(mysqli_num_rows($duplicate) > 0){
+        echo
+        "<script> alert('Username or Email Has Already Taken'); </script>";
+    }
+    else{
+        if($password == $confirmpassword){
+            $query = "INSERT INTO tb_user VALUES('', '$name', '$username', '$email', '$password')";
+            mysqli_query($conn,$query);
+            echo
+           "<script> alert('ADD USER Successful'); </script>";
+        }
+        else{
+            echo
+        "<script> alert('Password Does Not Match'); </script>";
+        }
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <title>Document</title>
+</head>
+<body>
+<form action="" method="post" autocomplete="off">
+        <h2>ADD USER</h2>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required value="">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required value="">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required value="">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required value="">
+        <label for="confirmpassword">Confirm password:</label>
+        <input type="password" name="confirmpassword" id="confirmpassword" required value="">
+        <button type="submit" name="submit">ADD user</button>
+        <a href="display.php">BACK</a>
+    </form>
+    <br>
+</body>
+</html>
