@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none; 
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+body{
+    background: url('asd.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav{
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    text-align: center;
+    display: flex;
+    transition: all 0,5s ease;
+    margin: 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a{
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+.bx{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+a:hover{
+    background: #eee;
+}
+
+nav:hover{
+    width: 280px;
+    transition: all 0.5 ease;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.center h1{
+    color: rgb(238, 113, 225);
+    font-size: 70px;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+}
+
+
+.center h2{
+    color: rgb(200, 156, 201);
+    font-size: 70px;
+    font-weight: bold;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.center .buttons{
+    margin: 35px 350px;
+}
+.button{
+    height: 50px;
+    width: 140px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffb3b3;
+    background: rgb(213, 157, 157) ;
+    border: 1px solid #d6a3a3;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.buttons button:hover{
+    background: #ffb3b3;
+}

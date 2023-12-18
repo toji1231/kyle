@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('asd.jpg');
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-primary a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.table {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary, .btn-danger {
+    margin: 5px;
+}
+
+.btn-primary a, .btn-danger a {
+    color: #241717;
+    text-decoration: none;
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
