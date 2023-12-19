@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Function to input employee information
+int addEmployee(char names[][50], int ages[], float salaries[], int numEmployees, const int MAX_EMPLOYEES) {
+    if (numEmployees < MAX_EMPLOYEES) {
+        printf("Enter employee name: ");
+        scanf("%s", names[numEmployees]);
+
+        printf("Enter employee age: ");
+        scanf("%d", &ages[numEmployees]);
+
+        printf("Enter employee salary: ");
+        scanf("%f", &salaries[numEmployees]);
+
+        printf("Employee added successfully.\n");
+        return 1; // Success
+    } else {
+        printf("Maximum number of employees reached.\n");
+        return 0; // Failure
+    }
+}
+
+// Function to display employee information
+void displayEmployees(const char names[][50], const int ages[], const float salaries[], int numEmployees) {
+    printf("\nEmployee List:\n");
+    for (int i = 0; i < numEmployees; ++i) {
+        printf("Name: %s, Age: %d, Salary: %.2f\n",
+               names[i], ages[i], salaries[i]);
+    }
+}
+
+int main() {
+    const int MAX_EMPLOYEES = 50;
+    char names[MAX_EMPLOYEES][50];
+    int ages[MAX_EMPLOYEES];
+    float salaries[MAX_EMPLOYEES];
+    int numEmployees = 0;
+    int choice;
+
+    do {
+        // Display menu
+        printf("\nEmployee Information System Menu:\n");
+        printf("1. Add Employee\n");
+        printf("2. Display Employees\n");
+        printf("3. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        // Call corresponding function based on user choice
+        switch (choice) {
+            case 1:
+                if (addEmployee(names, ages, salaries, numEmployees, MAX_EMPLOYEES)) {
+                    numEmployees++;
+                }
+                break;
+            case 2:
+                displayEmployees(names, ages, salaries, numEmployees);
+                break;
+            case 3:
+                printf("Exiting Employee Information System. Goodbye!\n");
+                break;
+            default:
+                printf("Invalid choice. Please enter a valid option.\n");
+        }
+    } while (choice != 3);
+
+    return 0;
+}
